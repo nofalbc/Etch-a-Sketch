@@ -1,0 +1,120 @@
+
+:root {
+    --content-width: 400px;
+}
+
+body{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    font-size: 3em;
+}
+button{
+    background:  #006969;
+    font-weight: bold;
+    font-size: 16px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+    max-width: calc(var(--content-width) + 40px);
+}
+.buttons > * {
+    flex: 1 1 auto;
+    margin: 5px;
+    padding: 5px;
+}
+/* container */
+.wrapper{
+    height: 75vw;
+    width: 75vw;
+    max-height: var(--content-width);
+    max-width: var(--content-width);
+    margin: 30px auto;
+    position: relative;
+}
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    bottom: 50%;
+    right: -15px;
+    left: -15px;
+    background: linear-gradient(90deg, #690000 0 50%, #006969 50% 100%);;
+    z-index: -1;
+}
+.wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: -15px;
+    right: -15px;
+    left: -15px;
+    background: linear-gradient(90deg, #006969 0 50%, #690000  50% 100%);;
+    z-index: -1;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    position: absolute;
+    background-color: white;
+}
+
+.grid-options{
+    display: flex;
+    width: 75vw;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--content-width);
+}
+.grid-options > * {
+    flex: 1 1 auto;
+}
+.clear{
+    
+}
+.slider-container{
+    width: 55vw;
+    padding-left: 20px;
+}
+.slider{
+    -webkit-appearance: none;  
+    transform: rotate(180deg);
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background:  #006969;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #690000;
+    cursor: pointer;
+    margin-top: -15px; 
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; 
+  }
+
+
+@media only screen and (min-width: 1500px) {
+    :root {
+        --content-width: 500px;
+    }
+}

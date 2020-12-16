@@ -4,11 +4,27 @@
         <title>
             Etch-A-Sketch
         </title>
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css" type="text/css">
+        <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
-        <div class="container" id="container"></div>
-
+        <h1 class="title">Etch-A-Sketch</h1>
+        <div class="buttons">
+            <button class="color-choice" data-color='black'>Black</button>
+            <button class="color-choice" data-color="rainbow">Rainbow</button>
+            <button class="color-choice" data-color="gray">GrayScale</button>
+            <button class="color-choice">Pick: <input type="color" value="#ff0000" id="input-color"></button>        </div>
+        <div class="wrapper">
+            <div class="container" id="container"></div>
+        </div>
+        <div class="grid-options">
+            <button class="clear">Clear</button>
+            <div class="slider-container">
+                <input type="range" min="4" max="100" value="16" class="slider">
+            </div>
+            
+        </div>
+        
     </body>
+    <script src="script.js"></script>
 </html>
